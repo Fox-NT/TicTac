@@ -1,0 +1,200 @@
+body {
+  overflow: hidden;
+  background-color: #262c37;
+  font-family: Arial;
+  font-size: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  user-select: none;
+}
+
+.container {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: max-content;
+}
+
+.table {
+  margin-bottom: 40px;
+}
+.table__row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -5px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.table__row:nth-last-child(1) .table__cell {
+  border-bottom: 0;
+}
+.table__cell {
+  width: 150px;
+  height: 150px;
+  margin-right: -5px;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.table__cell::after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 5px;
+  left: 5px;
+  background-color: #394252;
+  transition: 0.2s ease-in;
+  width: 96%;
+  height: 96%;
+  opacity: 0;
+  z-index: -1;
+}
+.table__cell:nth-last-child(1) {
+  border-right: 0;
+}
+
+.table__cell:hover::after {
+  opacity: 1;
+}
+
+.player1Mark {
+  color: #1c1ede;
+}
+
+.player2Mark {
+  color: #a10107;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 40px;
+  border-bottom: 5px solid #fff;
+  transition: 0.5s ease-in;
+}
+.score__player {
+  margin-bottom: 20px;
+  display: flex;
+}
+.score__player--1 {
+  color: #1c1ede;
+  margin-left: 10px;
+}
+.score__player--2 {
+  color: #a10107;
+  margin-left: 10px;
+}
+
+.restart {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+.restart .btn {
+  transition: 0.25s;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 5;
+}
+.restart .btn:hover {
+  box-shadow: 0 14px 28px rgba(137, 255, 40, 0.25), 0 10px 10px rgba(40, 255, 44, 0.22);
+  transition: 0.25s;
+  transition-delay: 1s;
+}
+.restart .btn a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #7eff28;
+  background-color: #262c37;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+.restart .btn a:hover {
+  background-color: #7eff28;
+  color: #1f242d;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+.restart .btn a span {
+  position: absolute;
+  display: block;
+  background-color: #7eff28;
+}
+.restart .btn a span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+}
+.restart .btn a:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+}
+.restart .btn a span:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+.restart .btn a:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+.restart .btn a span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+.restart .btn a:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+.restart .btn a span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+.restart .btn a:hover span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+/*# sourceMappingURL=style.css.map */
